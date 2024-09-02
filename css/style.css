@@ -5,6 +5,7 @@
 }
 body p{
     color: #fff;
+  text-shadow: -1px 1px 0 #000000;
     
 }
 
@@ -98,7 +99,64 @@ footer{
     position: absolute;
     border-radius: 10px;
 }
+.w-group{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
 
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: #cfcfcf;
+    border-radius: .25rem;
+    appearance: none;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked{
+    background-color: lawngreen;
+}
+
+input[type="checkbox"]::before{
+    content: " ";
+    position: absolute;
+    top: 4px;
+    width: 5px;
+    left: 9px;
+    height: 13px;
+    border: 4px solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg) scale(1);
+}
+input[type="checkbox"]:checked:before{
+    border-color: #fff;
+    animation: checkAnim 2.s ease;
+
+}
+@keyframes checkAnim{
+    from{
+        transform:rotate(45deg) scale(0);
+    }
+}
+.label{
+    color: #272727;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.wrap p{
+    color: #000000;
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.wrap{
+ padding: 40px;
+}
 .input-group {
     display: flex;
     flex-wrap: wrap;
@@ -207,15 +265,16 @@ footer{
     padding: 20px;
 }
 .sobre p{
-    text-align: center;
+        text-align: center;
         font-size: large;
         color: #ffffff;
         padding: 40px;
+        
 }
 
 .sobre{
 
-
+background-image: url(./img/thisisengineering-sbVu5zitZt0-unsplash.jpg);
 background-color: rgb(0, 0, 0);
 box-shadow: 0px 3px 10px #001aff;
 
@@ -261,39 +320,28 @@ box-shadow: 0px 3px 10px #001aff;
     width: 150px;
 }
 .imagem{
-    width: 50%;
+  width: 30%;
+  height: 30%;
+    border-radius: 40px;
+    border: #06042c;
+    
 }
+
 .caixa{
     display: flex;
-    flex-direction: row;
+   flex-direction: column;
     padding: 30px;
     text-align: center;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    align-items: center;
+  
+}
+.caixa:hover{
+    transform: scale(1.25,1.25);
 }
 
-.caixa-2{
-    padding: 50px;
-    display: flex;
-    flex-direction: row-reverse;
-    text-align: center;
-}
-.imagem-3{
-
- width: 50%;
 
 
-}
-.caixa-4{
-    display: flex;
-        flex-direction: row-reverse;
-        padding: 30px;
-        text-align: center;
-      
-}
-.caixa-3{
-   display: flex;
-   flex-direction: row;
-   padding: 30px;
-}
 
 
 .info-cadastro{
@@ -301,7 +349,6 @@ box-shadow: 0px 3px 10px #001aff;
     display: flex;
     align-items: center;
     flex-direction: column;
-        padding: 30px;
         border-radius: 8px;
         text-align: center;
         box-shadow: 0px 3px 10px #001aff;
@@ -309,6 +356,9 @@ box-shadow: 0px 3px 10px #001aff;
         color: #000000;
     
 
+}
+.info-cadastro p{
+    padding: 20px;
 }
 .seguranca{
     width: 30%;
@@ -325,4 +375,46 @@ box-shadow: 0px 3px 10px #001aff;
 .section-contato p, h2{
     color: #fff;
     
+}
+.img{
+    height: 200px;
+        height: 200px;
+        border-radius: 40px;
+        border: #06042c;
+}
+.info-cadastro ul {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    padding: 10px;
+}
+.icone{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    gap: 5px;
+    justify-content: center;
+    display: flex;
+
+
+}
+.previa{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 20px;
+}
+.previa:hover{
+    transform: scale(1.25, 1.25);
+
+}
+.homem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
